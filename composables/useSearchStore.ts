@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue'
+import { useRuntimeConfig } from '#app'
 
 interface Song {
   videoId: string
@@ -9,11 +10,12 @@ interface Song {
 export const useSearchStore = () => {
   const searchQuery = ref('')
   const songs = ref<Song[]>([])
+  const config = useRuntimeConfig()
 
   const fetchSongs = async () => {
     if (songs.value.length === 0) {
       try {
-        const response = await fetch('songs.json')
+        const response = await fetch(`${config.app.baseURL}songs.json`)
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }

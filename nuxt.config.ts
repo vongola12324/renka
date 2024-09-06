@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   target: 'static',
   modules: ['@nuxtjs/tailwindcss'],
   app: {
-    baseURL: '/renka/', // Update this to match your repository name
+    baseURL: '/renka/', // Make sure this ends with a trailing slash
     head: {
       title: 'RenKa - Song Practice App',
       meta: [
@@ -18,7 +18,9 @@ export default defineNuxtConfig({
     },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
-
+  router: {
+    base: '/renka/' // This ensures all router links are prefixed with /renka/
+  },
   compatibilityDate: '2024-09-06',
   nitro: {
     routeRules: {

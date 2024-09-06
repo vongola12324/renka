@@ -49,12 +49,14 @@ import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getYouTubeUrl } from '~/utils/youtubeHelper'
 import { useSearchStore } from '~/composables/useSearchStore'
+import { useRuntimeConfig } from '#app'
 
 const route = useRoute()
 const currentTime = ref({ minutes: 0, seconds: 0 })
 const { songs, fetchSongs } = useSearchStore()
 const lyrics = ref([])
 const youtubePlayer = ref(null)
+const config = useRuntimeConfig()
 
 const song = computed(() => songs.value.find(s => s.videoId === route.query.id))
 
@@ -67,7 +69,7 @@ const youtubeUrl = computed(() => {
 
 const fetchLyrics = async (videoId) => {
   try {
-    const response = await fetch(`lyrics/${videoId}.json`)
+    const response = await fetch(`${config.app.baseURL}lyrics/${videoId}.json`)
     const data = await response.json()
     lyrics.value = data.lyrics
   } catch (error) {

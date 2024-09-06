@@ -67,7 +67,7 @@ const youtubeUrl = computed(() => {
 
 const fetchLyrics = async (videoId) => {
   try {
-    const response = await fetch(`/lyrics/${videoId}.json`)
+    const response = await fetch(`lyrics/${videoId}.json`)
     const data = await response.json()
     lyrics.value = data.lyrics
   } catch (error) {

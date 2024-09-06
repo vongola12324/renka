@@ -13,7 +13,7 @@ export const useSearchStore = () => {
   const fetchSongs = async () => {
     if (songs.value.length === 0) {
       try {
-        const response = await fetch('/songs.json')
+        const response = await fetch('songs.json')
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }

@@ -31,3 +31,13 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      - name: Purge cache
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.repos.requestPagesBuild({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })

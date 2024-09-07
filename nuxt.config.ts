@@ -31,9 +31,21 @@ export default defineNuxtConfig({
     routeRules: {
       '/**': {
         headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; img-src 'self' https://i.ytimg.com https://img.youtube.com; style-src 'self' 'unsafe-inline';"
         }
       }
     }
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: `assets/[name].[hash].js`,
+          chunkFileNames: `assets/[name].[hash].js`,
+          assetFileNames: `assets/[name].[hash].[ext]`,
+        },
+      },
+    },
   }
 })

@@ -2,12 +2,16 @@
   <div v-if="song" class="px-4 py-8">
     <h1 class="text-2xl sm:text-3xl font-bold mb-2 text-center text-blue-600 dark:text-blue-400">{{ song.title }}</h1>
     <h2 class="text-lg sm:text-xl font-semibold mb-4 text-center text-gray-600 dark:text-gray-400">{{ song.artist }}</h2>
-    <div class="mb-8 max-w-3xl mx-auto">
+    <div class="mb-8 max-w-3xl mx-auto relative">
       <YouTubePlayer 
         :videoId="song.videoId" 
         @timeUpdate="updateCurrentTime"
+        @stateChange="updatePlayerState"
         ref="youtubePlayer"
       />
+      <div class="absolute bottom-12 left-0 right-0"> <!-- Changed from bottom-14 to bottom-12 -->
+        <CurrentLyrics :lyrics="lyrics" :currentTime="currentTime" />
+      </div>
     </div>
     <div v-if="lyrics.length > 0" class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 mb-4 max-w-3xl mx-auto">
       <LyricsDisplay 
@@ -17,7 +21,7 @@
       />
     </div>
     <div v-else class="text-center text-gray-600 dark:text-gray-400">
-      Loading lyrics...
+      No lyrics found.
     </div>
     
     <!-- Lyrics References -->
@@ -63,6 +67,8 @@ import { useRoute } from 'vue-router'
 import { getYouTubeUrl } from '~/utils/youtubeHelper'
 import { useSearchStore } from '~/composables/useSearchStore'
 import { useRuntimeConfig } from '#app'
+import CurrentLyrics from '~/components/CurrentLyrics.vue'
+import '~/assets/styles/lyrics.css'
 
 const route = useRoute()
 const currentTime = ref({ minutes: 0, seconds: 0 })
@@ -110,6 +116,11 @@ const updateCurrentTime = (time) => {
   currentTime.value = time
 }
 
+const updatePlayerState = (state) => {
+  // You can still use this function if you need to handle player state changes
+  // for other purposes, but it's no longer needed for controlling lyrics display
+}
+
 const seekToTime = (time) => {
   if (youtubePlayer.value) {
     const seconds = time.minutes * 60 + time.seconds
@@ -117,3 +128,12 @@ const seekToTime = (time) => {
   }
 }
 </script>
+
+<style scoped>
+.absolute {
+  pointer-events: none; /* This allows clicks to pass through to the video player */
+}
+.absolute > * {
+  pointer-events: auto; /* This restores pointer events for the CurrentLyrics component */
+}
+</style>

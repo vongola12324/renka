@@ -15,7 +15,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['timeUpdate'])
+const emit = defineEmits(['timeUpdate', 'stateChange'])
 
 const playerId = ref(`youtube-player-${Math.random().toString(36).substr(2, 9)}`)
 const playerLoaded = ref(false)
@@ -55,10 +55,30 @@ const createPlayer = (YT) => {
 
 const onPlayerReady = (event) => {
   // Player is ready
+  emit('stateChange', 'ready')
 }
 
 const onPlayerStateChange = (event) => {
-  // Handle player state changes
+  switch (event.data) {
+    case YT.PlayerState.UNSTARTED:
+      emit('stateChange', 'unstarted')
+      break
+    case YT.PlayerState.ENDED:
+      emit('stateChange', 'ended')
+      break
+    case YT.PlayerState.PLAYING:
+      emit('stateChange', 'playing')
+      break
+    case YT.PlayerState.PAUSED:
+      emit('stateChange', 'paused')
+      break
+    case YT.PlayerState.BUFFERING:
+      emit('stateChange', 'buffering')
+      break
+    case YT.PlayerState.CUED:
+      emit('stateChange', 'cued')
+      break
+  }
 }
 
 const updateTime = () => {

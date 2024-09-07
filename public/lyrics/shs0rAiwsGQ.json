@@ -350,6 +350,606 @@
                     "reading": "ぬ"
                 }
             ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 34,
+                "length": 4
+            },
+            "text": "百戦//錬磨//の//見//た//目//は//將校",
+            "furigana": [
+                {
+                    "text": "百戦",
+                    "reading": "ひゃくせん"
+                },
+                {
+                    "text": "錬磨",
+                    "reading": "れんま"
+                },
+                {
+                    "text": "見",
+                    "reading": "み"
+                },
+                {
+                    "text": "目",
+                    "reading": "め"
+                },
+                {
+                    "text": "將校",
+                    "reading": "しょうこう"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 38,
+                "length": 3
+            },
+            "text": "いったりきたりの//花魁道中",
+            "furigana": [
+                {
+                    "text": "花魁道中",
+                    "reading": "おいらんどうちゅう"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 41,
+                "length": 3
+            },
+            "text": "アイツもコイツも//皆//で//集//まれ",
+            "furigana": [
+                {
+                    "text": "皆",
+                    "reading": "みな"
+                },
+                {
+                    "text": "集",
+                    "reading": "あつ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 44,
+                "length": 3
+            },
+            "text": "聖者//の//行進//　わんっ　つー　さん　しっ",
+            "furigana": [
+                {
+                    "text": "聖者",
+                    "reading": "せいじゃ"
+                },
+                {
+                    "text": "行進",
+                    "reading": "こうしん"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 47,
+                "length": 3
+            },
+            "text": "禪定門//を//潛//り//抜//けて",
+            "furigana": [
+                {
+                    "text": "禪定門",
+                    "reading": "ぜんじょうもん"
+                },
+                {
+                    "text": "潛",
+                    "reading": "もぐ"
+                },
+                {
+                    "text": "抜",
+                    "reading": "ぬ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 50,
+                "length": 3
+            },
+            "text": "安楽浄土//厄//払//い",
+            "furigana": [
+                {
+                    "text": "安楽浄土",
+                    "reading": "あんらくじょうど"
+                },
+                {
+                    "text": "厄",
+                    "reading": "やく"
+                },
+                {
+                    "text": "払",
+                    "reading": "ばら"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 53,
+                "length": 3
+            },
+            "text": "きっと//終幕//は//大団円",
+            "furigana": [
+                {
+                    "text": "終幕",
+                    "reading": "さいご"
+                },
+                {
+                    "text": "大団円",
+                    "reading": "だいだねん"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 1,
+                "seconds": 56,
+                "length": 3
+            },
+            "text": "拍手//の//合間//に",
+            "furigana": [
+                {
+                    "text": "拍手",
+                    "reading": "はくしゅ"
+                },
+                {
+                    "text": "合間",
+                    "reading": "あいま"
+                }
+            ]
+        },{
+            "time": {
+                "minutes": 1,
+                "seconds": 59,
+                "length": 3
+            },
+            "text": "千本桜//　//夜//ニ//紛//レ",
+            "furigana": [
+                {
+                    "text": "千本桜",
+                    "reading": "せんぼんざくら"
+                },
+                {
+                    "text": "夜",
+                    "reading": "よる"
+                },
+                {
+                    "text": "紛",
+                    "reading": "まぎ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 2,
+                "length": 3
+            },
+            "text": "君//ノ//聲//モ//屆//カナイヨ",
+            "furigana": [
+                {
+                    "text": "君",
+                    "reading": "きみ"
+                },
+                {
+                    "text": "聲",
+                    "reading": "こえ"
+                },
+                {
+                    "text": "屆",
+                    "reading": "とど"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 5,
+                "length": 3
+            },
+            "text": "此處//は//宴//　//鋼//の//檻",
+            "furigana": [
+                {
+                    "text": "此處",
+                    "reading": "ここ"
+                },
+                {
+                    "text": "宴",
+                    "reading": "うたげ"
+                },
+                {
+                    "text": "鋼",
+                    "reading": "はがね"
+                },
+                {
+                    "text": "檻",
+                    "reading": "おり"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 8,
+                "length": 4
+            },
+            "text": "その//斷頭台//で//見下//ろして",
+            "furigana": [
+                {
+                    "text": "斷頭台",
+                    "reading": "だんとうだい"
+                },
+                {
+                    "text": "見下",
+                    "reading": "みお"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 12,
+                "length": 3
+            },
+            "text": "三千世界//　//常世之闇",
+            "furigana": [
+                {
+                    "text": "三千世界",
+                    "reading": "さんぜんせかい"
+                },
+                {
+                    "text": "常世之闇",
+                    "reading": "とこよのやみ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 15,
+                "length": 3
+            },
+            "text": "嘆//ク//唄//モ//聞//コエナイヨ",
+            "furigana": [
+                {
+                    "text": "嘆",
+                    "reading": "なげ"
+                },
+                {
+                    "text": "唄",
+                    "reading": "うた"
+                },
+                {
+                    "text": "聞",
+                    "reading": "き"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 18,
+                "length": 3
+            },
+            "text": "希望//の//丘//　//遙//か//彼方",
+            "furigana": [
+                {
+                    "text": "希望",
+                    "reading": "きぼう"
+                },
+                {
+                    "text": "丘",
+                    "reading": "おか"
+                },
+                {
+                    "text": "遙",
+                    "reading": "はるか"
+                },
+                {
+                    "text": "彼方",
+                    "reading": "かなた"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 21,
+                "length": 4
+            },
+            "text": "その//閃光弾//を//打//ち//上//げろ",
+            "furigana": [
+                {
+                    "text": "閃光弾",
+                    "reading": "せんこうだん"
+                },
+                {
+                    "text": "打",
+                    "reading": "う"
+                },
+                {
+                    "text": "上",
+                    "reading": "あ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 56,
+                "length": 3
+            },
+            "text": "環狀線//を//走//り//抜//けて",
+            "furigana": [
+                {
+                    "text": "環狀線",
+                    "reading": "かんじょうせん"
+                },
+                {
+                    "text": "走",
+                    "reading": "はし"
+                },
+                {
+                    "text": "抜",
+                    "reading": "ぬ"
+                }
+            ]
+        },
+        
+        {
+            "time": {
+                "minutes": 2,
+                "seconds": 59,
+                "length": 3
+            },
+            "text": "東奔西走//なんのその",
+            "furigana": [
+                {
+                    "text": "東奔西走",
+                    "reading": "とうほんせいそう"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 2,
+                "length": 3
+            },
+            "text": "少年//少女//戦國//無雙",
+            "furigana": [
+                {
+                    "text": "少年",
+                    "reading": "しょうねん"
+                },
+                {
+                    "text": "少女",
+                    "reading": "しょうじょ"
+                },
+                {
+                    "text": "戦國",
+                    "reading": "せんごく"
+                },
+                {
+                    "text": "無雙",
+                    "reading": "むそう"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 5,
+                "length": 3
+            },
+            "text": "浮世//の//隨//に",
+            "furigana": [
+                {
+                    "text": "浮世",
+                    "reading": "うきよ"
+                },
+                {
+                    "text": "隨",
+                    "reading": "まにま"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 8,
+                "length": 3
+            },
+            "text": "千本桜//　//夜//ニ//紛//レ",
+            "furigana": [
+                {
+                    "text": "千本桜",
+                    "reading": "せんぼんざくら"
+                },
+                {
+                    "text": "夜",
+                    "reading": "よる"
+                },
+                {
+                    "text": "紛",
+                    "reading": "まぎ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 11,
+                "length": 3
+            },
+            "text": "君//ノ//聲//モ//屆//カナイヨ",
+            "furigana": [
+                {
+                    "text": "君",
+                    "reading": "きみ"
+                },
+                {
+                    "text": "聲",
+                    "reading": "こえ"
+                },
+                {
+                    "text": "屆",
+                    "reading": "とど"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 14,
+                "length": 3
+            },
+            "text": "此處//は//宴//　//鋼//の//檻",
+            "furigana": [
+                {
+                    "text": "此處",
+                    "reading": "ここ"
+                },
+                {
+                    "text": "宴",
+                    "reading": "うたげ"
+                },
+                {
+                    "text": "鋼",
+                    "reading": "はがね"
+                },
+                {
+                    "text": "檻",
+                    "reading": "おり"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 17,
+                "length": 3
+            },
+            "text": "その//断頭台//を//飛//び//降//りて",
+            "furigana": [
+                {
+                    "text": "斷頭台",
+                    "reading": "だんとうだい"
+                },
+                {
+                    "text": "飛",
+                    "reading": "と"
+                },
+                {
+                    "text": "降",
+                    "reading": "お"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 20,
+                "length": 3
+            },
+            "text": "千本桜//　//夜//ニ//紛//レ",
+            "furigana": [
+                {
+                    "text": "千本桜",
+                    "reading": "せんぼんざくら"
+                },
+                {
+                    "text": "夜",
+                    "reading": "よる"
+                },
+                {
+                    "text": "紛",
+                    "reading": "まぎ"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 23,
+                "length": 4
+            },
+            "text": "君//が//歌//い//僕//は//踊//る",
+            "furigana": [
+                {
+                    "text": "君",
+                    "reading": "きみ"
+                },
+                {
+                    "text": "歌",
+                    "reading": "うた"
+                },
+                {
+                    "text": "僕",
+                    "reading": "ぼく"
+                },
+                {
+                    "text": "踊",
+                    "reading": "おど"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 27,
+                "length": 3
+            },
+            "text": "此處//は//宴//　//鋼//の//檻",
+            "furigana": [
+                {
+                    "text": "此處",
+                    "reading": "ここ"
+                },
+                {
+                    "text": "宴",
+                    "reading": "うたげ"
+                },
+                {
+                    "text": "鋼",
+                    "reading": "はがね"
+                },
+                {
+                    "text": "檻",
+                    "reading": "おり"
+                }
+            ]
+        },
+        {
+            "time": {
+                "minutes": 3,
+                "seconds": 30,
+                "length": 5
+            },
+            "text": "さあ//光線銃//を//撃//ちまくれ",
+            "furigana": [
+                {
+                    "text": "光線銃",
+                    "reading": "こうせんじゅう"
+                },
+                {
+                    "text": "撃",
+                    "reading": "う"
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,23 @@
+.lyrics-line {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.lyrics-line ruby {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 1px;
+  line-height: 1.5;
+}
+
+.lyrics-line rt {
+  font-size: 0.6em;
+  line-height: 1;
+  text-align: center;
+  color: #ccc;
+  order: -1;
+  margin-bottom: 0.1em;
+}

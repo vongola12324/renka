@@ -18,6 +18,7 @@
 
 <script setup>
 import { computed } from 'vue'
+import '~/assets/styles/lyrics.css'
 
 const props = defineProps({
   line: {
@@ -57,31 +58,3 @@ const formatTime = (time) => {
   return `[${minutes}:${seconds}]`
 }
 </script>
-
-<style scoped>
-.lyrics-line {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-
-ruby {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-right: 1px;
-}
-
-rt {
-  font-size: 0.5em;
-  line-height: 1;
-  text-align: center;
-  color: theme('colors.gray.500');
-  @media (prefers-color-scheme: dark) {
-    color: theme('colors.gray.400');
-  }
-  order: -1;
-  margin-bottom: 0.1em;
-}
-</style>

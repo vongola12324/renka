@@ -28,22 +28,19 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-09-06',
   nitro: {
-    routeRules: {
-      '/**': {
-        headers: {
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; img-src 'self' https://i.ytimg.com https://img.youtube.com; style-src 'self' 'unsafe-inline';"
-        }
-      }
-    }
+    preset: 'github-pages',
+  },
+  generate: {
+    fallback: '404.html'
   },
   vite: {
     build: {
+      assetsDir: '_nuxt', // This will put the assets in a _nuxt folder
       rollupOptions: {
         output: {
-          entryFileNames: `assets/[name].[hash].js`,
-          chunkFileNames: `assets/[name].[hash].js`,
-          assetFileNames: `assets/[name].[hash].[ext]`,
+          entryFileNames: '_nuxt/[name].[hash].js',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          assetFileNames: '_nuxt/[name].[hash][extname]',
         },
       },
     },

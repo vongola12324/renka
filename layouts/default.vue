@@ -55,14 +55,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, nextTick } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useSearchStore } from '~/composables/useSearchStore'
 import SearchResults from '~/components/SearchResults.vue'
 import Footer from '~/components/Footer.vue'
 import { useRouter } from 'vue-router'
 import { useDarkMode } from '~/composables/useDarkMode'
 
-const { searchQuery, songs, fetchSongs, search } = useSearchStore()
+const { searchQuery, fetchSongs, search } = useSearchStore()
 const showSearch = ref(false)
 const searchResults = ref(null)
 const searchInput = ref(null)
@@ -107,24 +107,6 @@ const selectResult = () => {
   router.push(`/song?id=${selectedSong.videoId}`)
   closeSearch()
 }
-
-watch(searchQuery, (newValue) => {
-  if (process.dev) {
-    console.log('Search query changed:', newValue)
-  }
-})
-
-watch(search, (newValue) => {
-  if (process.dev) {
-    console.log('Search results:', newValue)
-  }
-})
-
-watch(songs, (newValue) => {
-  if (process.dev) {
-    console.log('Songs data updated:', newValue , { deep: true })
-  }
-})
 </script>
 
 <style scoped>
@@ -146,17 +128,5 @@ watch(songs, (newValue) => {
 .backdrop-blur-sm {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-}
-
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-.mt-auto {
-  margin-top: auto;
 }
 </style>

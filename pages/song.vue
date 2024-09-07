@@ -6,10 +6,9 @@
       <YouTubePlayer 
         :videoId="song.videoId" 
         @timeUpdate="updateCurrentTime"
-        @stateChange="updatePlayerState"
         ref="youtubePlayer"
       />
-      <div class="absolute bottom-12 left-0 right-0"> <!-- Changed from bottom-14 to bottom-12 -->
+      <div class="absolute bottom-12 left-0 right-0">
         <CurrentLyrics :lyrics="lyrics" :currentTime="currentTime" />
       </div>
     </div>
@@ -114,11 +113,6 @@ watch(() => route.query.id, async (newId) => {
 
 const updateCurrentTime = (time) => {
   currentTime.value = time
-}
-
-const updatePlayerState = (state) => {
-  // You can still use this function if you need to handle player state changes
-  // for other purposes, but it's no longer needed for controlling lyrics display
 }
 
 const seekToTime = (time) => {

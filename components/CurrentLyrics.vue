@@ -55,7 +55,3 @@ const parseLyrics = (text, furigana) => {
   return parts
 }
 </script>
-
-<style scoped>
-/* You can remove the scoped styles for ruby and rt if they're no longer needed */
-</style>

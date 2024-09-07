@@ -8,7 +8,7 @@
         @timeUpdate="updateCurrentTime"
         ref="youtubePlayer"
       />
-      <div class="absolute bottom-12 left-0 right-0">
+      <div class="absolute bottom-14 left-0 right-0">
         <CurrentLyrics :lyrics="lyrics" :currentTime="currentTime" />
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+  <div class="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
     <nav class="bg-blue-600 dark:bg-blue-800 text-white p-4 shadow-md">
       <div class="container mx-auto flex justify-between items-center">
         <NuxtLink to="/" class="text-xl sm:text-2xl font-bold">RenKa</NuxtLink>
@@ -20,9 +20,10 @@
         </div>
       </div>
     </nav>
-    <main class="container mx-auto" :class="{ 'blur-transition': showSearch }">
+    <main class="flex-grow container mx-auto" :class="{ 'blur-transition': showSearch }">
       <slot />
     </main>
+    <Footer class="mt-auto" />
     <Transition name="fade">
       <div v-if="showSearch" class="fixed inset-0 z-50 overflow-y-auto pt-16 sm:pt-24">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-25 dark:bg-gray-900 dark:bg-opacity-50 transition-opacity backdrop-blur-sm" @click="closeSearch"></div>
@@ -57,6 +58,7 @@
 import { ref, watch, onMounted, nextTick } from 'vue'
 import { useSearchStore } from '~/composables/useSearchStore'
 import SearchResults from '~/components/SearchResults.vue'
+import Footer from '~/components/Footer.vue'
 import { useRouter } from 'vue-router'
 import { useDarkMode } from '~/composables/useDarkMode'
 
@@ -146,4 +148,15 @@ watch(songs, (newValue) => {
   -webkit-backdrop-filter: blur(4px);
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
 </style>

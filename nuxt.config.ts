@@ -16,10 +16,15 @@ export default defineNuxtConfig({
         { hid: 'description', name: 'description', content: 'Practice your favorite songs with RenKa' }
       ],
     },
-    layoutTransition: { name: 'layout', mode: 'out-in' }
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
   router: {
     base: '/renka/' // This ensures all router links are prefixed with /renka/
+  },
+  runtimeConfig: {
+    public: {
+      githubRepo: 'https://github.com/vongola12324/renka'
+    }
   },
   compatibilityDate: '2024-09-06',
   nitro: {

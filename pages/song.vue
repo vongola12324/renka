@@ -9,7 +9,7 @@
         ref="youtubePlayer"
       />
     </div>
-    <div v-if="lyrics.length > 0" class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 mb-8 max-w-3xl mx-auto">
+    <div v-if="lyrics.length > 0" class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 mb-4 max-w-3xl mx-auto">
       <LyricsDisplay 
         :lyrics="lyrics" 
         :currentTime="currentTime"
@@ -19,7 +19,20 @@
     <div v-else class="text-center text-gray-600 dark:text-gray-400">
       Loading lyrics...
     </div>
-    <div class="text-center space-x-4 flex justify-center items-center">
+    
+    <!-- Lyrics References -->
+    <div v-if="lyricsReferences.length > 0" class="mt-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg max-w-3xl mx-auto">
+      <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">References</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li v-for="(reference, index) in lyricsReferences" :key="index" class="text-sm text-gray-600 dark:text-gray-300">
+          <a :href="reference.url" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">
+            {{ reference.description || reference.url }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="text-center space-x-4 flex justify-center items-center mt-8">
       <NuxtLink 
         to="/" 
         class="inline-flex items-center justify-center bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition duration-300"
@@ -55,6 +68,7 @@ const route = useRoute()
 const currentTime = ref({ minutes: 0, seconds: 0 })
 const { songs, fetchSongs } = useSearchStore()
 const lyrics = ref([])
+const lyricsReferences = ref([])
 const youtubePlayer = ref(null)
 const config = useRuntimeConfig()
 
@@ -72,11 +86,13 @@ const fetchLyrics = async (videoId) => {
     const response = await fetch(`${config.app.baseURL}lyrics/${videoId}.json`)
     const data = await response.json()
     lyrics.value = data.lyrics
+    lyricsReferences.value = data.references || []
   } catch (error) {
     if (process.dev) {
       console.error('Error fetching lyrics:', error)
     }
     lyrics.value = []
+    lyricsReferences.value = []
   }
 }
 

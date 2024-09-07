@@ -36,6 +36,16 @@ To add new songs to RenKa, follow these steps:
    - Use the following format for the lyrics:
      ```json
      {
+       "references": [
+         {
+           "url": "https://example.com/source-of-lyrics",
+           "description": "Original lyrics"
+         },
+         {
+           "url": "https://example.com/translation",
+           "description": "English translation"
+         }
+       ],
        "lyrics": [
          {
            "time": {"minutes": 0, "seconds": 32, "length": 3},
@@ -46,28 +56,17 @@ To add new songs to RenKa, follow these steps:
        ]
      }
      ```
-   - For songs with furigana (Japanese lyrics), use this format:
-     ```json
-     {
-       "lyrics": [
-         {
-           "time": {"minutes": 0, "seconds": 32, "length": 3},
-           "text": "大胆不敵//にハイカラ//革命",
-           "furigana": [
-             {"text": "大胆不敵", "reading": "だいたんふてき"},
-             {"text": "革命", "reading": "かくめい"}
-           ]
-         },
-         // ... more lyrics ...
-       ]
-     }
-     ```
 
 3. Ensure the YouTube video is available and not region-locked.
 
 4. Rebuild and redeploy the app to include the new song.
 
-Note: Make sure to respect copyright laws and obtain necessary permissions when adding song lyrics.
+**Important Notice:**
+- If the lyrics are not originally written by you, you MUST include a `reference` field with a link to the source of the lyrics.
+- Ensure you have the right to use and display the lyrics. Respect copyright laws and obtain necessary permissions.
+- This project is for educational purposes only. Do not use copyrighted material without proper authorization.
+
+Note: Adding lyrics without proper attribution or permission may lead to copyright infringement. Always err on the side of caution and provide proper credit to the original sources.
 
 ## How to Deploy
 
